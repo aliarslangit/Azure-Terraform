@@ -29,7 +29,7 @@ variable "rgname" {
 }
 variable "vmname" {
   type    = string
-  default = "cpm-demo-vm"
+  default = "demo-vm"
 }
 
 variable "location" {
