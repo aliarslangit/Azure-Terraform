@@ -1,19 +1,11 @@
-resource "azurerm_resource_group" "cmp" {
+resource "azurerm_resource_group" "demo" {
   name     = var.rgname
   location = var.location
-
-  tags = {
-    Name         = var.db_server,
-    Owner        = var.owner,
-    Environment  = var.Environment,
-    BuisnessUnit = var.Buisness_unit,
-    Application  = var.Application,
-  }
 }
-resource "azurerm_mysql_server" "cmp" {
+resource "azurerm_mysql_server" "demo" {
   name                = var.db_server
   location            = var.location
-  resource_group_name = azurerm_resource_group.cmp.name
+  resource_group_name = azurerm_resource_group.demo.name
 
   administrator_login          = var.username
   administrator_login_password = "H@Sh1CoR3!"
@@ -30,20 +22,16 @@ resource "azurerm_mysql_server" "cmp" {
   ssl_enforcement_enabled           = true
   ssl_minimal_tls_version_enforced  = "TLS1_2"
 
-
   tags = {
-    Name         = var.db_server,
-    Owner        = var.owner,
-    Environment  = var.Environment,
-    BuisnessUnit = var.Buisness_unit,
-    Application  = var.Application,
+    Owner       = var.owner,
+    Environment = var.Environment
   }
 }
 
-resource "azurerm_mysql_database" "cmp" {
+resource "azurerm_mysql_database" "demo" {
   name                = var.db_name
-  resource_group_name = azurerm_resource_group.cmp.name
-  server_name         = azurerm_mysql_server.cmp.name
+  resource_group_name = azurerm_resource_group.demo.name
+  server_name         = azurerm_mysql_server.demo.name
   charset             = "utf8"
   collation           = "utf8_unicode_ci"
 }

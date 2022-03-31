@@ -25,7 +25,7 @@ variable "azure_tenant_id" {
 //----------------------------------------------//
 variable "rgname" {
   type        = string
-  default     = "RG-CMP-VMs"
+  default     = "RG-demo-VMs"
   description = "Enter Azure Resource group name"
 }
 
@@ -48,7 +48,7 @@ variable "db_name" {
 variable "db_server" {
   type        = string
   default     = "example-mysqlserver"
-  description = "ener databas server name"
+  description = "ener database server name"
 }
 variable "username" {
   type        = string
@@ -61,38 +61,11 @@ variable "command" {
 }
 //------------------------------------TAGS-------------------------\\
 variable "owner" {
-  type        = string
-  default     = "Ali"
-  description = "description"
+  type    = string
+  default = "Ali"
 }
 
 variable "Environment" {
-  type        = string
-  default     = "PRD"
-  description = "Enter storage account name"
+  type    = string
+  default = "PRD"
 }
-
-variable "Buisness_unit" {
-  type        = string
-  default     = "Accounts-1"
-  description = "Enter storage account name"
-}
-
-variable "Application" {
-  type        = string
-  default     = "TesDbServer1"
-  description = "Enter storage account name"
-}
-
-variable "Platform" {
-  type        = string
-  default     = "Linux"
-  description = "Enter storage account name"
-}
-
-variable "Type" {
-  type        = string
-  default     = "Node Exporter"
-  description = "Enter storage account name"
-}
-
