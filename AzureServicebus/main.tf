@@ -3,10 +3,8 @@ resource "azurerm_resource_group" "demo" {
   location = var.location
 
   tags = {
-    Owner        = var.owner,
-    Environment  = var.environment,
-    BusinessUnit = var.businessunit,
-    Application  = var.application,
+    Owner       = var.owner,
+    Environment = var.environment,
   }
 }
 
@@ -17,10 +15,8 @@ resource "azurerm_servicebus_namespace" "demo" {
   sku                 = "Standard"
 
   tags = {
-    Owner        = var.owner,
-    Environment  = var.environment,
-    BusinessUnit = var.businessunit,
-    Application  = var.application,
+    Owner       = var.owner,
+    Environment = var.environment,
   }
 }
 
