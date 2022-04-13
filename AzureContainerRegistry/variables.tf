@@ -28,11 +28,11 @@ variable "azure_tenant_id" {
 
 variable "rgname" {
   type    = string
-  default = "test_cmprgacr"
+  default = "test_demorgacr"
 }
 variable "acrname" {
   type    = string
-  default = "cmpdemoacr"
+  default = "demodemoacr"
 }
 
 variable "location" {
@@ -48,7 +48,7 @@ variable "sku" {
 //------------------------------------TAGS-------------------------\\
 variable "owner" {
   type        = string
-  default     = "Ravi"
+  default     = "Ali"
   description = "description"
 }
 
