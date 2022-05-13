@@ -27,7 +27,7 @@ variable "azure_tenant_id" {
 //------------------------------------TAGS-----------------------------------------\\
 variable "owner" {
   type        = string
-  default     = "Ashwani"
+  default     = "Ali"
   description = "description"
 }
 
